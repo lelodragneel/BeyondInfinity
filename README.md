@@ -1,5 +1,6 @@
 # BeyondInfinity
-2D android turn-based game with strategic combat and leveling system.
+2D android turn-based game with strategic combat and leveling system.  
+Currently being built in Android Studio 3.x
 
 Contributors:  
 lelodragneel - Developer & UI Design  
