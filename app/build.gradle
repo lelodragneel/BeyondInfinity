@@ -5,6 +5,7 @@ android {
     buildToolsVersion "26.0.2"
     defaultConfig {
         applicationId "com.example.lawrenceayoub.beyondinfinity"
+        multiDexEnabled true
         minSdkVersion 25
         targetSdkVersion 26
         versionCode 1
@@ -26,5 +27,6 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.jakob-grabner:Circle-Progress-View:v1.3'
     testCompile 'junit:junit:4.12'
 }

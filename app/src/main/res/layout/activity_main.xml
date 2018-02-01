@@ -6,6 +6,57 @@
     android:layout_height="match_parent"
     tools:context="com.example.lawrenceayoub.beyondinfinity.MainActivity">
 
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="200dp"
+        android:layout_height="238dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_enemy"
+            android:layout_width="0dp"
+            android:layout_height="173dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout_1"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout_1"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#EFEFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/progressBar_enemyHealth"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:indeterminate="false"
+                android:progress="100"
+                android:scaleY="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
     <Button
         android:id="@+id/button_a1"
         android:layout_width="0dp"
@@ -14,6 +65,7 @@
         android:layout_marginEnd="4dp"
         android:layout_marginStart="8dp"
         android:text="Button"
+        android:tooltipText="hshfh"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_a2"
         app:layout_constraintStart_toStartOf="parent" />
@@ -74,119 +126,123 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="4dp"
         android:text="Button"
+        android:tooltipText="ghfhdfnbd gj gjfg "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_a5" />
-
-    <ProgressBar
-        android:id="@+id/progressBar_playerHealth"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="156dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_currentLevel" />
-
-    <ProgressBar
-        android:id="@+id/progressBar_enemyHealth"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="156dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_nextLevel" />
 
     <ToggleButton
         android:id="@+id/toggleButton_stance"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginStart="8dp"
+        android:checked="true"
         android:text="ToggleButton"
         app:layout_constraintBottom_toTopOf="@+id/button_a1"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/button_talentTree"
+    <ToggleButton
+        android:id="@+id/toggleButton_stance2"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="4dp"
-        android:text="Button"
-        app:layout_constraintEnd_toStartOf="@+id/button_map"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="ToggleButton"
+        app:layout_constraintBottom_toTopOf="@+id/button_a1"
+        app:layout_constraintStart_toEndOf="@+id/toggleButton_stance" />
 
-    <Button
-        android:id="@+id/button_map"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginTop="4dp"
-        android:onClick="openMap"
-        android:text="Button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_surrender"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ProgressBar
-        android:id="@+id/progressBar_experience"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="273dp"
-        android:layout_height="14dp"
-        android:layout_marginTop="18dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView_currentLevel"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/progressBar_experience"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView_nextLevel"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="200dp"
+        android:layout_height="238dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="10dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/progressBar_experience"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView_enemy"
-        android:layout_width="156dp"
-        android:layout_height="173dp"
-        android:layout_marginEnd="16dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar_enemyHealth"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <ImageView
-        android:id="@+id/imageView_player"
-        android:layout_width="156dp"
-        android:layout_height="173dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/progressBar_playerHealth"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_player"
+            android:layout_width="0dp"
+            android:layout_height="173dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:background="#EFEFEF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RatingBar
+                android:id="@+id/ratingBar_playerResource"
+                style="@android:style/Widget.Holo.Light.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="4dp"
+                android:numStars="6"
+                android:rating="1"
+                android:stepSize="1"
+                android:theme="?android:attr/quickContactBadgeStyleSmallWindowSmall"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHeight_max="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progressBar_playerHealth"
+                app:layout_constraintWidth_max="0dp" />
+
+            <ProgressBar
+                android:id="@+id/progressBar_playerHealth"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:indeterminate="false"
+                android:progress="100"
+                android:scaleY="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="68dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            app:cpv_barColor="@color/colorPrimary"
+            app:cpv_barWidth="4dp"
+            app:cpv_direction="CCW"
+            app:cpv_fillColor="#b3ff99"
+            app:cpv_innerContourSize="0dp"
+            app:cpv_outerContourSize="0dp"
+            app:cpv_rimColor="#00000000"
+            app:cpv_text="Lvl 99"
+            app:cpv_textMode="Text"
+            app:cpv_textSize="10sp"
+            app:cpv_value="20" />
+
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
